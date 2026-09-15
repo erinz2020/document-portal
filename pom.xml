@@ -12,10 +12,10 @@
   </parent>
 
   <groupId>com.example</groupId>
-  <artifactId>basic-spring-boot</artifactId>
+  <artifactId>document-portal</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>basic-spring-boot</name>
-  <description>A minimal Spring Boot REST API project</description>
+  <name>document-portal</name>
+  <description>A minimal Spring Boot and Angular document lookup app</description>
 
   <properties>
     <java.version>17</java.version>

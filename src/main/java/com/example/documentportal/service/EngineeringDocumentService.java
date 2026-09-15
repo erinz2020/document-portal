@@ -1,8 +1,8 @@
-package ca.markham.engineeringdrawing.service;
+package com.example.documentportal.service;
 
-import ca.markham.engineeringdrawing.dto.EngineeringDocumentDto;
-import ca.markham.engineeringdrawing.entity.EngineeringDocument;
-import ca.markham.engineeringdrawing.repository.EngineeringDocumentRepository;
+import com.example.documentportal.dto.EngineeringDocumentDto;
+import com.example.documentportal.entity.EngineeringDocument;
+import com.example.documentportal.repository.EngineeringDocumentRepository;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
@@ -34,3 +34,4 @@ public class EngineeringDocumentService {
                 .toList();
     }
 }
+

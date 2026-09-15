@@ -1,5 +1,5 @@
 {
-  "name": "engineering-drawing-frontend",
+  "name": "document-portal-frontend",
   "version": "0.0.1",
   "scripts": {
     "start": "ng serve --proxy-config proxy.conf.json",
@@ -26,4 +26,3 @@
     "typescript": "~5.5.4"
   }
 }
-

@@ -1,4 +1,4 @@
-package ca.markham.engineeringdrawing.dto;
+package com.example.documentportal.dto;
 
 public record EngineeringDocumentDto(
         Long attachmentRsn,

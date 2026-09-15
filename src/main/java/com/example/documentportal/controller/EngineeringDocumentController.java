@@ -1,7 +1,7 @@
-package ca.markham.engineeringdrawing.controller;
+package com.example.documentportal.controller;
 
-import ca.markham.engineeringdrawing.dto.EngineeringDocumentDto;
-import ca.markham.engineeringdrawing.service.EngineeringDocumentService;
+import com.example.documentportal.dto.EngineeringDocumentDto;
+import com.example.documentportal.service.EngineeringDocumentService;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,3 +21,4 @@ public class EngineeringDocumentController {
         return service.getDesignCriteria();
     }
 }
+

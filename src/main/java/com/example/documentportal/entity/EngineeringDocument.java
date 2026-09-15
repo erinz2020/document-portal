@@ -1,4 +1,4 @@
-package ca.markham.engineeringdrawing.entity;
+package com.example.documentportal.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -97,3 +97,4 @@ public class EngineeringDocument {
         this.dosPath = dosPath;
     }
 }
+
