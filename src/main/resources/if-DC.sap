@@ -1,0 +1,152 @@
+<%@LANGUAGE="VBSCRIPT" CODEPAGE="65001"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "https://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml">
+
+<html>
+<head>
+
+<title>Design Criteria</title>
+
+<meta http-equiv="Content-Type"
+      content="text/html; charset=utf-8" />
+
+<meta http-equiv="X-UA-Compatible"
+      content="IE=9,chrome=1">
+
+<link href="https://www2.markham.ca/markham/aspc/PORTAL/style2.css"
+      type="text/css"
+      rel="stylesheet"
+      media="all" />
+
+<!-- Submit-Once-Only-Button Script -->
+<script language="Javascript" type="text/javascript">
+
+function classChange(styleChange,item){
+    item.className = styleChange;
+}
+
+</script>
+<!-- End Submit-Change -->
+
+
+<link rel="stylesheet"
+      href="include/externalStyle.css"
+      type="text/css"
+      media="screen" />
+
+<!-- Other stylesheet links from the original file -->
+
+
+</head>
+
+<body style="font-family:BrandonGrotesqueWeb-bold, sans-serif;">
+
+<table border="0" cellpadding="3"
+       width="90%" cellspacing="0">
+
+
+<!-- ========================================================= -->
+<!-- AI NOTE:
+     This form POSTs its values to if-comboSearchDC.asp.
+
+     The user does NOT need to type the search criteria.
+     The page itself supplies the values below.
+-->
+<!-- ========================================================= -->
+
+<form name="EngSearch"
+      action="if-comboSearchDC.asp"
+      method="post">
+
+
+<tr>
+
+    <!-- ===================================================== -->
+    <!-- AI NOTE:
+         FOLDERDESC is a hidden form field.
+
+         The browser will submit this value automatically:
+
+         FOLDERDESC =
+         "Engineering Standard Drawings & Design Criteria"
+
+         if-comboSearchDC.asp / ParComboDC.asp can later read it
+         using Request.Form("FOLDERDESC").
+    -->
+    <!-- ===================================================== -->
+
+    <td align="left" valign="top" width="100%">
+        <input name="FOLDERDESC"
+               type="hidden"
+               id="FOLDERDESC"
+               value="Engineering Standard Drawings &amp; Design Criteria">
+    </td>
+
+</tr>
+
+
+<tr>
+
+    <td align="left" valign="top" width="100%">
+
+        <!-- ================================================= -->
+        <!-- AI NOTE:
+             SUBDESC is another search criterion.
+
+             "Design Criteria" is already selected here.
+
+             Therefore the request will contain approximately:
+
+             SUBDESC = "Design Criteria"
+        -->
+        <!-- ================================================= -->
+
+        <select name="SUBDESC"
+                size="2"
+                id="SUBDESCCombo">
+
+            <option value="Design Criteria"
+                    selected="selected"
+                    title="Design Criteria">
+                Design Criteria - Table of Contents,
+                Standards &amp; Requirements
+            </option>
+
+        </select>
+
+
+        <!-- ================================================= -->
+        <!-- AI NOTE:
+             WORKDESC is also supplied automatically.
+
+             This is important: the current page appears to send
+             THREE criteria:
+
+             FOLDERDESC = Engineering Standard Drawings & Design Criteria
+             SUBDESC    = Design Criteria
+             WORKDESC   = Guidelines
+
+             This means ParComboDC.asp may use its
+             "search ALL fields" branch.
+        -->
+        <!-- ================================================= -->
+
+        <input name="WORKDESC"
+               type="hidden"
+               id="WORKDESC"
+               value="Guidelines">
+
+
+        <input name="SUBMIT"
+               type="submit"
+               class="yesNoButton"
+               value="Search">
+
+    </td>
+
+</tr>
+
+</form>
+
+<!-- remaining HTML not visible in the photo -->
