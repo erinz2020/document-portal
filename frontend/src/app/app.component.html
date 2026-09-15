@@ -1,0 +1,35 @@
+<main class="page">
+  <section class="panel">
+    <header>
+      <p>Engineering Drawing</p>
+      <h1>Document Lookup</h1>
+      <span>Use a POST request to load documents from the Spring Boot API.</span>
+    </header>
+
+    <div class="search-form">
+      <div>
+        <strong>Design Criteria</strong>
+        <span>Load documents with a GET request.</span>
+      </div>
+
+      <button type="button" (click)="loadDocuments()" [disabled]="loading">
+        {{ loading ? 'Loading...' : 'Load documents' }}
+      </button>
+    </div>
+
+    <p *ngIf="error" class="error">{{ error }}</p>
+
+    <section class="results" *ngIf="documents.length > 0">
+      <h2>Results</h2>
+
+      <article *ngFor="let document of documents" class="document-card">
+        <strong>{{ document.attachmentDescription }}</strong>
+        <span>Attachment RSN: {{ document.attachmentRsn }}</span>
+      </article>
+    </section>
+
+    <p class="empty" *ngIf="!loading && !error && documents.length === 0">
+      No documents loaded yet.
+    </p>
+  </section>
+</main>
